@@ -1,4 +1,4 @@
-export const findQuotes = () => {
+export const findCharacters = () => {
     return fetch('https://vampire-diaries.herokuapp.com/api/characters')
       .then((res) => res.json())
       .then((json) =>
