@@ -8,6 +8,11 @@ export default class VampireDiariesContainer extends Component {
         characters: [],
     };
 
+    componentDidMount() {
+        findCharacters().then((characters) => this.setState({ characters, loading: false })
+        );
+    }
+
     render() {
         const { loading, characters } = this.state;
 
