@@ -18,7 +18,7 @@ export default class KanyeContainer extends Component {
 
         if(loading) {
             return (
-                <im src="https://wirdd.in/kanye/gifs/head.gif" alt="kanye head loading spinner" />
+                <img src="https://wirdd.in/kanye/gifs/head.gif" alt="kanye head loading spinner" />
             );
         }
         return <QuoteList quotes={quotes} />;
