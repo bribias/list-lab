@@ -3,10 +3,10 @@ export const findCharacters = () => {
       .then((res) => res.json())
       .then((json) =>
         jsonjson.results.map((quote) => ({
-          id: character.id,
+            id: character.id,
             character: character.character,
             actor: charactor.actor,
-          episodeCount: character.episodeCount,
+            episodeCount: character.episodeCount,
         }))
       );
 }
