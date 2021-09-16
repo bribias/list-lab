@@ -24,3 +24,17 @@ const server = setupServer(
         );
     })
 );
+
+describe('VampireDiariesContainer', () => {
+    beforeAll(() => server.listen());
+    afterAll(() => server.close());
+
+    it('renders a list of characters', async () => {
+        render(<VampireDiariesContainer />);
+
+        screen.getAllByAltText('loading spinner');
+
+        const ul = await screen.findByRole('list', { name: 'characters' });
+        expect(ul).toMatchSnapshot();
+    });
+});
