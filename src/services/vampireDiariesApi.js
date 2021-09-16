@@ -4,7 +4,7 @@ export const findCharacters = () => {
       .then((json) =>
         jsonjson.results.map((quote) => ({
             id: character.id,
-            character: character.character,
+            name: character.name,
             actor: charactor.actor,
             episodeCount: character.episodeCount,
         }))

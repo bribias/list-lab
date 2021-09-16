@@ -1,18 +1,18 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Character = ({ character, actor, episodeCount }) => {
+const Character = ({ name, actor, episodeCount }) => {
     <>
-        <p>{character}</p>
+        <p>{name}</p>
         <p>{actor}</p>
-        <p>{epsiodeCount}</p>
+        <p>{episodeCount}</p>
     </>
 };
 
 Character.propTypes = {
-    charater: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
     actor: PropTypes.string.isRequired,
-    epsiodeCount: PropTypes.number
+    episodeCount: PropTypes.number.isRequired
 };
 
 export default Character;
