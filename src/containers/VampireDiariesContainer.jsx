@@ -18,7 +18,8 @@ export default class VampireDiariesContainer extends Component {
 
         if (loading) {
             return (
-                <img src="https://wirdd.in/kanye/gifs/head.gif" alt="kanye head spinner" />
+                <img src="https://wirdd.in/kanye/gifs/head.gif" alt="kanye head spinner"
+                />
             );
         }
         return <CharacterList characters={characters} />
