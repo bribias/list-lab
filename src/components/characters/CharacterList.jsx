@@ -8,8 +8,7 @@ const CharacterList = ({ characters }) => (
             <li key={character.id}>
                 <Character
                     name={character.name}
-                    actor={character.actor}
-                    epsiodeCount={character.epsiodeCount}
+                    image={character.image}
                 />
             </li>
         ))}
@@ -21,8 +20,7 @@ CharacterList.propTypes = {
         PropTypes.shape({
         id: PropTypes.number.isRequired,
         name: PropTypes.string.isRequired,
-        actor: PropTypes.string.isRequired,
-        epsiodeCount: PropTypes.number.isRequired,
+        image: PropTypes.string.isRequired
     })
     ).isRequired,
 };

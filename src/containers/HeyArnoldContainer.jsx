@@ -1,20 +1,20 @@
 import React, { Component } from 'react';
-import { findOneCharacter } from '../services/vampireDiariesApi';
+import { findCharacters } from '../services/HeyArnoldAPI';
 import CharacterList from '../components/characters/CharacterList';
 
-export default class VampireDiariesDetails extends Component {
+export default class HeyArnoldContainer extends Component {
     state = {
         loading: true,
-        character: [],
+        characters: [],
     };
 
     componentDidMount() {
-        findOneCharacter().then((character) => this.setState({ character, loading: false })
+        findCharacters().then((characters) => this.setState({ characters, loading: false })
         );
     }
 
     render() {
-        const { loading, character } = this.state;
+        const { loading, characters } = this.state;
 
         if (loading) {
             return (
@@ -22,6 +22,6 @@ export default class VampireDiariesDetails extends Component {
                 />
             );
         }
-        return <CharacterList character={character} />
+        return <CharacterList characters={characters} />
     }
 }
