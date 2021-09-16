@@ -1,17 +1,11 @@
-import dotenv from 'dotenv';
-dotenv.config();
-
 import React from 'react';
 import { render, screen } from '@testing-library/react';
-import VampireDiariesContainer from './VampireDiariesContainer';
+import HeyArnoldContainer from './HeyArnoldContainer';
 import { MemoryRouter } from 'react-router-dom';
 
-describe('VampireDiariesContainer', () => {
-    beforeAll(() => server.listen());
-    afterAll(() => server.close());
-
+describe('HeyArnoldContainer', () => {
     it('renders a list of characters', async () => {
-        await render(<MemoryRouter><VampireDiariesContainer /></MemoryRouter>);
+        render(<MemoryRouter><HeyArnoldContainer /></MemoryRouter>);
 
         screen.getAllByAltText('loading spinner');
 

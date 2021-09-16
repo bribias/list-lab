@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { findCharacters } from '../services/HeyArnoldAPI';
+import { findCharacters } from '../services/heyArnoldAPI';
 import CharacterList from '../components/characters/CharacterList';
 
 export default class HeyArnoldContainer extends Component {
@@ -15,7 +15,6 @@ export default class HeyArnoldContainer extends Component {
 
     render() {
         const { loading, characters } = this.state;
-
         if (loading) {
             return (
                 <img src="https://wirdd.in/kanye/gifs/head.gif" alt="loading spinner"
@@ -24,4 +23,4 @@ export default class HeyArnoldContainer extends Component {
         }
         return <CharacterList characters={characters} />
     }
-}
+};

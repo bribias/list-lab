@@ -1,16 +1,18 @@
 import React from 'react';
-import VampireDiariesContainer from '../../containers/VampireDiariesContainer';
+import HeyArnoldContainer from '../../containers/HeyArnoldContainer';
+import HeyArnoldDetail from '../../containers/HeyArnoldDetail';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 export default function App() {
-  return
+  return(
   <Router>
     <Switch>
       <Route path='/:id'>
-        <VampireDiariesDetails />
+        <HeyArnoldDetail />
       </Route>
-<Route path='/'>
-        <VampireDiariesDetails />
+        <Route path='/'>
+        <HeyArnoldContainer />
       </Route>
       </Switch>
-</Router>
+</Router>)
 }
